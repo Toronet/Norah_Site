@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "NORAH Token represents contractual rights to Norah Mining's lithium concentrate revenue streams. Multi-chain Real World Asset tokenization with automated revenue distribution.",
   authors: [{ name: "NORAH Token" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "NORAH Token - Multi-Chain RWA Tokenization Platform",
     description:
