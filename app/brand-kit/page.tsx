@@ -17,7 +17,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import norahLogo from "@/assets/norah-gold.jpg";
 import Image from "next/image";
 
 const BrandKit = () => {
