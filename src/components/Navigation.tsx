@@ -1,15 +1,17 @@
+"use client";
+
 import { useState } from "react";
 import { Menu, X, Wallet, LogIn, LogOut, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
-import norahLogo from "@/assets/norah-gold.jpg";
+import Image from "next/image";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAdmin, signOut } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -26,7 +28,7 @@ const Navigation = () => {
   };
 
   const goToHome = () => {
-    navigate("/");
+    router.push("/");
     setIsOpen(false);
   };
 
@@ -34,11 +36,17 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <button 
+          <button
             onClick={goToHome}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img src={norahLogo} alt="Norah Token" className="w-10 h-10 p-1 rounded-full shadow-glow-purple" />
+            <Image
+              width={40}
+              height={40}
+              src={"/norah-gold.jpg"}
+              alt="Norah Token"
+              className="w-10 h-10 p-1 rounded-full shadow-glow-purple"
+            />
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Norah Token
             </span>
@@ -56,7 +64,7 @@ const Navigation = () => {
             <ThemeToggle />
             {isAdmin && (
               <Button
-                onClick={() => navigate("/admin")}
+                onClick={() => router.push("/admin")}
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
@@ -74,7 +82,7 @@ const Navigation = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => navigate("/auth")}
+                onClick={() => router.push("/auth")}
                 className="bg-gradient-primary hover:shadow-glow-purple transition-all duration-300"
               >
                 <LogIn className="w-4 h-4 mr-2" />
@@ -106,7 +114,7 @@ const Navigation = () => {
             </div>
             {isAdmin && (
               <Button
-                onClick={() => navigate("/admin")}
+                onClick={() => router.push("/admin")}
                 variant="outline"
                 className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
@@ -124,7 +132,7 @@ const Navigation = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => navigate("/auth")}
+                onClick={() => router.push("/auth")}
                 className="w-full bg-gradient-primary hover:shadow-glow-purple transition-all duration-300"
               >
                 <LogIn className="w-4 h-4 mr-2" />

@@ -34,7 +34,7 @@ const About = () => {
             About NORAH Token
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            NORAH Token represents a contractual right to participate in Norah Mining's verified lithium concentrate revenue streams.
+            NORAH Token represents a contractual right to participate in Norah Mining&apos;s verified lithium concentrate revenue streams.
             Our mission is to tokenize real-world mining assets and provide transparent, automated revenue distribution
             through blockchain technology.
           </p>

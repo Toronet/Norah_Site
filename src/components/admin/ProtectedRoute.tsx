@@ -1,6 +1,8 @@
+'use client';
+
 import { ReactNode, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface ProtectedRouteProps {
   children: ReactNode;
@@ -9,17 +11,17 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute = ({ children, requireAdmin = false }: ProtectedRouteProps) => {
   const { user, isAdmin, loading } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     if (!loading) {
       if (!user) {
-        navigate("/auth");
+        router.push("/auth");
       } else if (requireAdmin && !isAdmin) {
-        navigate("/");
+        router.push("/");
       }
     }
-  }, [user, isAdmin, loading, navigate, requireAdmin]);
+  }, [user, isAdmin, loading, router, requireAdmin]);
 
   if (loading) {
     return (

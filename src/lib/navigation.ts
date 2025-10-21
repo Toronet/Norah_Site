@@ -1,7 +1,9 @@
-import { useNavigate } from "react-router-dom";
+'use client';
+
+import { useRouter } from "next/navigation";
 
 export const useNavigation = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToSection = (sectionId: string) => {
     const currentPath = window.location.pathname;
@@ -10,7 +12,7 @@ export const useNavigation = () => {
       const element = document.querySelector(sectionId);
       element?.scrollIntoView({ behavior: "smooth" });
     } else {
-      navigate('/');
+      router.push('/');
       setTimeout(() => {
         const element = document.querySelector(sectionId);
         element?.scrollIntoView({ behavior: "smooth" });

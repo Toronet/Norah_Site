@@ -1,15 +1,18 @@
+"use client";
+
 import { Twitter, Send, MessageCircle, Github, Mail } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useNavigation, FooterLink } from "@/lib/navigation";
-import norahLogo from "@/assets/norah-gold.jpg";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { navigateToSection } = useNavigation();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const goToHome = () => {
-    navigate("/");
+    router.push("/");
   };
 
   const footerLinks: Record<string, FooterLink[]> = {
@@ -36,7 +39,11 @@ const Footer = () => {
   const socialIcons = [
     { icon: Twitter, href: "https://twitter.com/norahtoken", label: "Twitter" },
     { icon: Send, href: "https://t.me/norahtoken", label: "Telegram" },
-    { icon: MessageCircle, href: "https://discord.gg/norahtoken", label: "Discord" },
+    {
+      icon: MessageCircle,
+      href: "https://discord.gg/norahtoken",
+      label: "Discord",
+    },
     { icon: Github, href: "https://github.com/norahtoken", label: "GitHub" },
     { icon: Mail, href: "mailto:contact@norahtoken.com", label: "Email" },
   ];
@@ -44,23 +51,29 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-border">
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background to-transparent" />
-      
+
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <button 
+            <button
               onClick={goToHome}
               className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity"
             >
-              <img src={norahLogo} alt="Norah Token" className="w-12 h-12 rounded-full shadow-glow-purple" />
+              <Image
+                width={48}
+                height={48}
+                src={"/norah-gold.jpg"}
+                alt="Norah Token"
+                className="w-12 h-12 rounded-full shadow-glow-purple"
+              />
               <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Norah Token
               </span>
             </button>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Revolutionizing the future of decentralized finance with innovative blockchain technology
-              and community-driven governance.
+              Revolutionizing the future of decentralized finance with
+              innovative blockchain technology and community-driven governance.
             </p>
             <div className="flex gap-3">
               {socialIcons.map((social, index) => (
@@ -92,9 +105,9 @@ const Footer = () => {
                       >
                         {link.name}
                       </button>
-                    ) : link.href.startsWith('/') ? (
+                    ) : link.href.startsWith("/") ? (
                       <Link
-                        to={link.href}
+                        href={link.href}
                         className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm"
                       >
                         {link.name}
@@ -120,13 +133,22 @@ const Footer = () => {
             © {currentYear} Norah Token. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <Link to="/terms" className="hover:text-primary transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors"
+            >
               Terms
             </Link>
-            <Link to="/privacy" className="hover:text-primary transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors"
+            >
               Privacy
             </Link>
-            <Link to="/contact" className="hover:text-primary transition-colors">
+            <Link
+              href="/contact"
+              className="hover:text-primary transition-colors"
+            >
               Contact
             </Link>
           </div>
@@ -135,8 +157,9 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="mt-8 p-4 rounded-lg bg-muted/20 border border-border">
           <p className="text-xs text-muted-foreground text-center">
-            <strong>Disclaimer:</strong> Cryptocurrency investments carry risk. Please do your own research
-            before investing. This website does not constitute financial advice.
+            <strong>Disclaimer:</strong> Cryptocurrency investments carry risk.
+            Please do your own research before investing. This website does not
+            constitute financial advice.
           </p>
         </div>
       </div>

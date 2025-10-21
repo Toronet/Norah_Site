@@ -26,10 +26,20 @@ export function ThemeProvider({
   storageKey = "norah-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  // 1. Initialize state with ONLY the defaultTheme.
+  //    This is "server-safe" and runs on both server and client.
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
 
+  // 2. NEW: Use a useEffect to load the saved theme from localStorage.
+  //    This hook ONLY runs on the client, after the component mounts.
+  useEffect(() => {
+    const storedTheme =
+      (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    setTheme(storedTheme);
+  }, []); // The empty array [] ensures this runs only once on mount.
+
+  // 3. Your original effect to apply the theme to the <html> tag.
+  //    This is also client-only and runs correctly whenever 'theme' changes.
   useEffect(() => {
     const root = window.document.documentElement;
 
@@ -46,7 +56,7 @@ export function ThemeProvider({
     }
 
     root.classList.add(theme);
-  }, [theme]);
+  }, [theme]); // Runs when the 'theme' state changes
 
   const value = {
     theme,
@@ -63,6 +73,7 @@ export function ThemeProvider({
   );
 }
 
+// Your useTheme hook is correct and needs no changes
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
 

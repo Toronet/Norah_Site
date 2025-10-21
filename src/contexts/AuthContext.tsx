@@ -1,7 +1,9 @@
+'use client';
+
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { User, Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 
 interface AuthContextType {
@@ -22,7 +24,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     // Set up auth state listener FIRST
@@ -94,7 +96,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         title: "Success!",
         description: "You have been signed in successfully.",
       });
-      navigate("/");
+      router.push("/");
     }
 
     return { error };
@@ -125,7 +127,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         title: "Success!",
         description: "Your account has been created successfully.",
       });
-      navigate("/");
+      router.push("/");
     }
 
     return { error };
@@ -144,7 +146,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         title: "Signed out",
         description: "You have been signed out successfully.",
       });
-      navigate("/");
+      router.push("/");
     }
   };
 
