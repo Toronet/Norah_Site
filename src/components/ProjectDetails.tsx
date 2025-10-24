@@ -15,8 +15,8 @@ const ProjectDetails = () => {
   });
 
   const contractAddress = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-  const targetGoal = 5600000; // USDT - Fund raise goal: $5.6 million
-  const raisedAmount = 2800000; // USDT
+  const targetGoal = 5600000;
+  const raisedAmount = 2800000;
   const progress = (raisedAmount / targetGoal) * 100;
   const participants = 1247;
 
