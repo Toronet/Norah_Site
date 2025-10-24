@@ -156,7 +156,7 @@ const BrandKit = () => {
               Brand Kit
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Official NORAH Token brand assets, guidelines, and resources for
+              Official Norah Token brand assets, guidelines, and resources for
               partners, developers, and community members.
             </p>
           </div>
@@ -239,7 +239,7 @@ const BrandKit = () => {
                               : "14px",
                         }}
                       >
-                        NORAH Token
+                        Norah Token
                       </div>
                     </div>
                   ))}
@@ -262,7 +262,7 @@ const BrandKit = () => {
                     <div className="w-24 h-24 mx-auto mb-4 rounded-lg bg-muted/20 border border-border flex items-center justify-center">
                       <Image
                         src="/norah-gold.jpg"
-                        alt="NORAH Logo"
+                        alt="Norah Logo"
                         width={40}
                         height={40}
                         className="w-16 h-16 rounded-full"

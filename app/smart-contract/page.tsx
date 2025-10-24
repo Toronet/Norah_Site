@@ -40,7 +40,7 @@ const SmartContract = () => {
     {
       icon: FileText,
       title: "Revenue Distribution",
-      description: "Automated quarterly USDT distributions to token holders",
+      description: "Up to 10% APR distributions from lithium mining revenues",
     },
     {
       icon: Code,
@@ -74,7 +74,7 @@ const SmartContract = () => {
               Smart Contract
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              NORAH Token smart contract details, addresses, and verification
+              Norah Token smart contract details, addresses, and verification
               information across all supported networks.
             </p>
           </div>
@@ -125,7 +125,7 @@ const SmartContract = () => {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>Automated revenue distribution every quarter</span>
+                      <span>Up to 10% APR distributions from lithium mining revenues</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
@@ -154,7 +154,7 @@ const SmartContract = () => {
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-lg bg-muted/20 border border-border text-center">
-                    <div className="text-2xl font-bold text-primary">21M</div>
+                    <div className="text-2xl font-bold text-primary">8M</div>
                     <div className="text-sm text-muted-foreground">
                       Total Supply
                     </div>
@@ -172,7 +172,7 @@ const SmartContract = () => {
                     </div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/20 border border-border text-center">
-                    <div className="text-2xl font-bold text-primary">$0.50</div>
+                    <div className="text-2xl font-bold text-primary">$10</div>
                     <div className="text-sm text-muted-foreground">
                       Token Price
                     </div>

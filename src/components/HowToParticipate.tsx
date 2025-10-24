@@ -18,13 +18,13 @@ const HowToParticipate = () => {
       icon: Coins,
       title: "Purchase Tokens",
       description:
-        "Buy NORAH tokens using USDT or native tokens. Tokens represent contractual rights to mining revenue streams.",
+        "Buy Norah tokens using USDT or native tokens. Tokens represent contractual rights to mining revenue streams.",
     },
     {
       icon: CheckCircle,
       title: "Receive Revenue Distributions",
       description:
-        "Hold your tokens to receive quarterly USDT distributions from Norah Mining's lithium concentrate revenues.",
+        "Hold your tokens to receive up to 10% APR distributions from Norah Mining's lithium concentrate revenues.",
     },
   ];
 

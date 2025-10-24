@@ -105,7 +105,7 @@ const AuditReport = () => {
               Security Audit Report
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive security audit results for NORAH Token smart
+              Comprehensive security audit results for Norah Token smart
               contracts across all supported networks.
             </p>
           </div>

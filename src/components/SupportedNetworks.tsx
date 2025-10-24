@@ -78,7 +78,7 @@ const SupportedNetworks = () => {
             Supported Networks
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            NORAH Token is available across multiple blockchain networks, providing flexibility and accessibility for users worldwide.
+            Norah Token is available across multiple blockchain networks, providing flexibility and accessibility for users worldwide.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ const SupportedNetworks = () => {
         <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-card border border-border shadow-card">
           <h3 className="text-2xl font-bold mb-4 text-center">Multi-Chain Bridge System</h3>
           <p className="text-muted-foreground text-center mb-6">
-            Transfer your NORAH tokens seamlessly between all supported networks with our advanced bridge technology.
+            Transfer your Norah tokens seamlessly between all supported networks with our advanced bridge technology.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-3">
