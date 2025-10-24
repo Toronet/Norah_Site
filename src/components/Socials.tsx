@@ -3,40 +3,34 @@ import { Twitter, Send, MessageCircle, Github, Globe, FileText } from "lucide-re
 const Socials = () => {
   const socialLinks = [
     {
-      name: "Twitter",
+      name: "X (Twitter)",
       icon: Twitter,
-      url: "https://twitter.com/norahtoken",
+      url: "https://x.com/norahmining?t=HPDtkUCZ4vegDtZYBliS2A&s=09",
       color: "hover:text-[#1DA1F2]",
     },
     {
-      name: "Telegram",
+      name: "Telegram Channel",
       icon: Send,
       url: "https://t.me/norahtoken",
       color: "hover:text-[#0088cc]",
     },
     {
-      name: "Discord",
+      name: "Telegram Community",
       icon: MessageCircle,
-      url: "https://discord.gg/norahtoken",
-      color: "hover:text-[#5865F2]",
+      url: "https://t.me/norahcommunity",
+      color: "hover:text-[#0088cc]",
     },
     {
-      name: "GitHub",
+      name: "LinkedIn",
       icon: Github,
-      url: "https://github.com/norahtoken",
-      color: "hover:text-foreground",
+      url: "https://www.linkedin.com/company/109183102",
+      color: "hover:text-[#0077B5]",
     },
     {
       name: "Website",
       icon: Globe,
-      url: "https://norahtoken.com",
+      url: "https://norahminingltd.com",
       color: "hover:text-primary",
-    },
-    {
-      name: "Medium",
-      icon: FileText,
-      url: "https://medium.com/@norahtoken",
-      color: "hover:text-foreground",
     },
   ];
 
@@ -55,7 +49,7 @@ const Socials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           {socialLinks.map((social, index) => (
             <a
               key={index}

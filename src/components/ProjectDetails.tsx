@@ -15,8 +15,8 @@ const ProjectDetails = () => {
   });
 
   const contractAddress = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-  const targetGoal = 10000000; // USDT
-  const raisedAmount = 6500000; // USDT
+  const targetGoal = 5600000; // USDT - Fund raise goal: $5.6 million
+  const raisedAmount = 2800000; // USDT
   const progress = (raisedAmount / targetGoal) * 100;
   const participants = 1247;
 
@@ -62,10 +62,12 @@ const ProjectDetails = () => {
   };
 
   const team = [
-    { name: "Dr. Ken Alabi", role: "Founder & CEO", image: "KA" },
-    { name: "Wisdom Ibrahim", role: "Lead Developer", image: "WI" },
-    { name: "Joshua Illori", role: "Blockchain Engineer", image: "JI" },
-    { name: "Sarah Chen", role: "Legal Counsel", image: "SC" },
+    { name: "Mr Toye Kudehinbu", role: "Managing Director", image: "TK" },
+    { name: "Dr. Ken Alabi", role: "Chief Technical Officer", image: "KA" },
+    { name: "Professor Wenhai Lee", role: "Chief Technology Officer", image: "WL" },
+    { name: "Mrs. Omolara Popoola", role: "Head of Marketing", image: "OP" },
+    { name: "Mr. Benjamin Adebajo", role: "Head of Mining Operations", image: "BA" },
+    { name: "Mr Muyiwa Ayanfalu", role: "Head of Strategy", image: "MA" },
   ];
 
   return (
@@ -156,7 +158,7 @@ const ProjectDetails = () => {
           <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-primary bg-clip-text text-transparent">
             Meet Our Team
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, index) => (
               <div
                 key={index}

@@ -32,16 +32,15 @@ const Hero = () => {
             <div className="flex items-center justify-center gap-2 text-primary animate-pulse">
               <Coins className="w-5 h-5" />
               <span className="text-sm font-semibold uppercase tracking-wider">
-                Real World Asset Token
+                First Real World Asset Token backed by verifiable Lithium Concentrate in Africa
               </span>
               <Coins className="w-5 h-5" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              NORAH Token
+              Norah Token
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Multi-chain Real World Asset tokenization platform for lithium
-              mining revenue streams
+              $NORAH token is a real-world-asset (RWA) participation token that allows global investors to share in verified concentrate revenues.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 px-4">
@@ -86,10 +85,10 @@ const Hero = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-16 max-w-4xl mx-auto px-4">
             {[
-              { label: "Total Supply", value: "21M NORAH" },
-              { label: "Token Price", value: "$0.50" },
+              { label: "Total Supply", value: "8M NORAH" },
+              { label: "Token Price", value: "$10" },
               { label: "Networks", value: "6 Chains" },
-              { label: "Launch Date", value: "Q1 2025" },
+              { label: "Launch Date", value: "Q4 2025" },
             ].map((stat, index) => (
               <div
                 key={index}

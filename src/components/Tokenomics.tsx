@@ -2,19 +2,23 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recha
 
 const Tokenomics = () => {
   const tokenData = [
-    { name: "Bridge Reserves", value: 30, color: "#8B5CF6" },
-    { name: "Revenue Distribution", value: 25, color: "#0EA5E9" },
-    { name: "Community", value: 20, color: "#10B981" },
-    { name: "Team", value: 15, color: "#F59E0B" },
-    { name: "Development", value: 10, color: "#EF4444" },
+    { name: "Private Sale", value: 20, color: "#8B5CF6" },
+    { name: "Presale", value: 15, color: "#0EA5E9" },
+    { name: "Exchange Listing", value: 7, color: "#10B981" },
+    { name: "Team and Advisors", value: 10, color: "#F59E0B" },
+    { name: "Revenue Pool", value: 6, color: "#EF4444" },
+    { name: "Mining Operations", value: 17, color: "#8B5CF6" },
+    { name: "Marketing", value: 10, color: "#0EA5E9" },
+    { name: "Treasury", value: 10, color: "#10B981" },
+    { name: "Ecosystem Development", value: 5, color: "#F59E0B" },
   ];
 
   const tokenMetrics = [
     { label: "Token Name", value: "Norah Token" },
     { label: "Token Symbol", value: "$NORAH" },
-    { label: "Total Supply", value: "21,000,000" },
-    { label: "Decimals", value: "18" },
-    { label: "Network", value: "6 Networks" },
+    { label: "Max Supply", value: "8,000,000" },
+    { label: "Year-1 Circulating Cap", value: "1,600,000" },
+    { label: "Vault Reserve", value: "6,400,000 locked" },
     { label: "Token Standard", value: "ERC-20/BEP-20/SPL/TRC-20" },
   ];
 
@@ -91,11 +95,7 @@ const Tokenomics = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>2.8% revenue share with halving mechanism</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>Commodity-based minting based on lithium performance</span>
+                  <span>Team and Advisors tokens have 12 months cliff</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -103,7 +103,11 @@ const Tokenomics = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Real World Asset (RWA) tokenization</span>
+                  <span>Real World Asset (RWA) tokenization backed by lithium concentrate</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Up to 10% APR distributions from lithium mining revenues</span>
                 </li>
               </ul>
             </div>

@@ -15,12 +15,12 @@ const About = () => {
     {
       icon: Users,
       title: "Revenue Sharing",
-      description: "2.8% quarterly USDT distributions from lithium mining revenues",
+      description: "Up to 10% APR distributions from lithium mining revenues",
     },
     {
       icon: TrendingUp,
-      title: "Commodity-Based Minting",
-      description: "Automatic token creation based on lithium price and yield performance",
+      title: "Commodity-Backed Token",
+      description: "Backed by verifiable lithium concentrate managed by Norah Mining",
     },
   ];
 
@@ -31,12 +31,11 @@ const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            About NORAH Token
+            About Norah Token
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            NORAH Token represents a contractual right to participate in Norah Mining&apos;s verified lithium concentrate revenue streams.
-            Our mission is to tokenize real-world mining assets and provide transparent, automated revenue distribution
-            through blockchain technology.
+            $NORAH token is a real-world-asset (RWA) participation token that allows global investors to share in verified concentrate revenues.
+            Norah Token is managed by Norah Holdings Pty Ltd in Australia. Norah Mining is a registered mining company with 5 Licensed mining locations in Nigeria.
           </p>
         </div>
 
@@ -57,13 +56,10 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-card border border-border shadow-card">
           <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-primary bg-clip-text text-transparent">
-            Our Vision
+            DISCOVER NORAH
           </h3>
           <p className="text-muted-foreground text-center leading-relaxed">
-            We envision a future where real-world assets are seamlessly integrated with blockchain technology,
-            providing transparent and automated revenue distribution. NORAH Token serves as a bridge between
-            traditional mining operations and the decentralized world, offering token holders direct participation
-            in verified lithium mining revenue streams.
+            Norah Token is managed by Norah Holdings Pty Ltd in Australia. Norah Mining is a registered mining company with 5 Licensed mining locations in Nigeria.
           </p>
         </div>
       </div>
