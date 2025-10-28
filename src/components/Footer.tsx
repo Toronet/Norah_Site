@@ -1,18 +1,42 @@
 "use client";
 
-import { Twitter, Send, MessageCircle, Github, Mail } from "lucide-react";
+import { useState } from "react";
+import { Twitter, Send, MessageCircle, Github, Mail, Eye, Download, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useNavigation, FooterLink } from "@/lib/navigation";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { navigateToSection } = useNavigation();
   const router = useRouter();
+  const [showWhitepaperModal, setShowWhitepaperModal] = useState(false);
 
   const goToHome = () => {
     router.push("/");
+  };
+
+  const handleWhitepaperClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowWhitepaperModal(true);
+  };
+
+  const handleViewWhitepaper = () => {
+    window.open("/15c.The $NORAH-WHITE-PAPER_Oct27th2025.pptx.pptx", "_blank");
+    setShowWhitepaperModal(false);
+  };
+
+  const handleDownloadWhitepaper = () => {
+    const link = document.createElement("a");
+    link.href = "/15c.The $NORAH-WHITE-PAPER_Oct27th2025.pptx.pptx";
+    link.download = "Norah-Token-Whitepaper.pptx";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowWhitepaperModal(false);
   };
 
   const footerLinks: Record<string, FooterLink[]> = {
@@ -20,10 +44,10 @@ const Footer = () => {
       { name: "About", href: "#about", isHomeSection: true },
       { name: "Tokenomics", href: "#tokenomics", isHomeSection: true },
       { name: "How to Participate", href: "#participate", isHomeSection: true },
-      { name: "Whitepaper", href: "#" },
+      { name: "Whitepaper", href: "#whitepaper", isWhitepaper: true },
     ],
     Resources: [
-      { name: "Documentation", href: "#" },
+      { name: "Documentation", href: "#whitepaper", isWhitepaper: true },
       { name: "Smart Contract", href: "/smart-contract" },
       { name: "Audit Report", href: "/audit-report" },
       { name: "Brand Kit", href: "/brand-kit" },
@@ -105,6 +129,13 @@ const Footer = () => {
                       >
                         {link.name}
                       </button>
+                    ) : link.isWhitepaper ? (
+                      <button
+                        onClick={handleWhitepaperClick}
+                        className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm text-left"
+                      >
+                        {link.name}
+                      </button>
                     ) : link.href.startsWith("/") ? (
                       <Link
                         href={link.href}
@@ -163,6 +194,37 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* White Paper Modal */}
+      <Dialog open={showWhitepaperModal} onOpenChange={setShowWhitepaperModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center">Norah Token Whitepaper</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4 py-4">
+            <p className="text-center text-muted-foreground">
+              How would you like to access the Norah Token whitepaper?
+            </p>
+            <div className="flex flex-col gap-3">
+              <Button
+                onClick={handleViewWhitepaper}
+                className="w-full bg-gradient-primary hover:shadow-glow-purple transition-all duration-300"
+              >
+                <Eye className="w-4 h-4 mr-2" />
+                View Online
+              </Button>
+              <Button
+                onClick={handleDownloadWhitepaper}
+                variant="outline"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download to Device
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 };

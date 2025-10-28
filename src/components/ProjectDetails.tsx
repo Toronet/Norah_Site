@@ -63,8 +63,8 @@ const ProjectDetails = () => {
 
   const team = [
     { name: "Mr Toye Kudehinbu", role: "Managing Director", image: "TK" },
-    { name: "Dr. Ken Alabi", role: "Chief Technical Officer", image: "KA" },
-    { name: "Professor Wenhai Lee", role: "Chief Technology Officer", image: "WL" },
+    { name: "Dr. Ken Alabi", role: "Chief Technical Officer - Consultant", image: "KA" },
+    { name: "Professor Wenhai Lee", role: "Chief Technology Officer - Consultant", image: "WL" },
     { name: "Mrs. Omolara Popoola", role: "Head of Marketing", image: "OP" },
     { name: "Mr. Benjamin Adebajo", role: "Head of Mining Operations", image: "BA" },
     { name: "Mr Muyiwa Ayanfalu", role: "Head of Strategy", image: "MA" },

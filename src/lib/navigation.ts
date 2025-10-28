@@ -27,4 +27,5 @@ export interface FooterLink {
   name: string;
   href: string;
   isHomeSection?: boolean;
+  isWhitepaper?: boolean;
 }
