@@ -117,7 +117,7 @@ const Tokenomics = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Multi-chain support: Ethereum, Solana, Base, BNB, Tron, Toronet, Doxa, Cloudax, Bantu</span>
+                  <span>Multi-chain support: Ethereum, Solana, Base, BNB, Tron, Toronet, Bantu, Doxa, Cloudax</span>
                 </li>
               </ul>
             </div>

@@ -87,7 +87,7 @@ const Hero = () => {
             {[
               { label: "Total Supply", value: "8M NORAH" },
               { label: "Token Price", value: "$10" },
-              { label: "Networks", value: "6 Chains" },
+              { label: "Networks", value: "8 Chains" },
               { label: "Launch Date", value: "Q4 2025" },
             ].map((stat, index) => (
               <div

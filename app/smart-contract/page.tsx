@@ -28,6 +28,8 @@ const SmartContract = () => {
     solana: "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
     toronet: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
     bantu: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+    doxa: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+    cloudax: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
   };
 
   const contractFeatures = [
@@ -119,6 +121,22 @@ const SmartContract = () => {
                       Tron Standard
                     </div>
                   </div>
+                  <div className="p-4 rounded-lg bg-muted/20 border border-border">
+                    <div className="text-2xl font-bold text-primary">
+                      DOXA
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Doxa Standard
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-muted/20 border border-border">
+                    <div className="text-2xl font-bold text-primary">
+                      CLDX
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Cloudax Standard
+                    </div>
+                  </div>
                 </div>
                 <div className="p-4 rounded-lg bg-muted/20 border border-border">
                   <h4 className="font-semibold mb-2">Key Features</h4>
@@ -166,7 +184,7 @@ const SmartContract = () => {
                     </div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/20 border border-border text-center">
-                    <div className="text-2xl font-bold text-primary">6</div>
+                    <div className="text-2xl font-bold text-primary">8</div>
                     <div className="text-sm text-muted-foreground">
                       Networks
                     </div>
@@ -225,6 +243,8 @@ const SmartContract = () => {
                           solana: `https://solscan.io/token/${address}`,
                           toronet: `https://toronet.org/token/${address}`,
                           bantu: `https://bantu.io/token/${address}`,
+                          doxa: `https://doxa.network/token/${address}`,
+                          cloudax: `https://cloudax.network/token/${address}`,
                         };
                         window.open(
                           explorerUrls[network as keyof typeof explorerUrls],

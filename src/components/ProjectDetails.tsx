@@ -124,7 +124,7 @@ const ProjectDetails = () => {
             Project Details
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about our token sale. Available on 6 networks: Ethereum, Binance, Base, Solana, Toronet, and Bantu.
+            Everything you need to know about our token sale. Available on 8 networks: Ethereum, Binance, Base, Solana, Toronet, Bantu, Doxa, and Cloudax.
           </p>
         </div>
 

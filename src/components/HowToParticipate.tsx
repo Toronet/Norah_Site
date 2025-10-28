@@ -12,7 +12,7 @@ const HowToParticipate = () => {
       icon: ArrowRight,
       title: "Choose Network",
       description:
-        "Select your preferred blockchain network from 6 supported networks: Ethereum, Binance, Base, Solana, Toronet, or Bantu.",
+        "Select your preferred blockchain network from 8 supported networks: Ethereum, Binance, Base, Solana, Toronet, Bantu, Doxa, or Cloudax.",
     },
     {
       icon: Coins,
