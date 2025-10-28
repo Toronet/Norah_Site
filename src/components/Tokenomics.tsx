@@ -14,12 +14,14 @@ const Tokenomics = () => {
   ];
 
   const tokenMetrics = [
-    { label: "Token Name", value: "Norah Token" },
+    { label: "Token Name", value: "Norah Participation Token" },
     { label: "Token Symbol", value: "$NORAH" },
-    { label: "Max Supply", value: "8,000,000" },
-    { label: "Year-1 Circulating Cap", value: "1,600,000" },
+    { label: "Max Supply", value: "8,000,000 (5 yr. supply)" },
+    { label: "Year-1 Circulating Cap", value: "1,600,000 (initial issuance)" },
     { label: "Vault Reserve", value: "6,400,000 locked" },
-    { label: "Token Standard", value: "ERC-20/BEP-20/SPL/TRC-20" },
+    { label: "Revenue Share", value: "2.8% of verified revenues" },
+    { label: "Distribution", value: "Quarterly in USDT via QRO" },
+    { label: "Asset Backing", value: "20% of 5-year output (100k MT)" },
   ];
 
   return (
@@ -95,19 +97,27 @@ const Tokenomics = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Team and Advisors tokens have 12 months cliff</span>
+                  <span>2-of-3 multisig governance for vault releases</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Multi-chain bridge system (6 networks: Ethereum, Binance, Base, Solana, Toronet, Bantu)</span>
+                  <span>Oracle-verified emission approvals</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Real World Asset (RWA) tokenization backed by lithium concentrate</span>
+                  <span>Performance-triggered emissions (capacity & price triggers)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Up to 10% APR distributions from lithium mining revenues</span>
+                  <span>Buy-back mechanisms for price stability</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>8 million hard cap ensures permanent scarcity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Multi-chain support: Ethereum, Solana, Base, BNB, Tron, Toronet, Doxa, Cloudax, Bantu</span>
                 </li>
               </ul>
             </div>

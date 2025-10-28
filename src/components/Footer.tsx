@@ -51,6 +51,8 @@ const Footer = () => {
       { name: "Smart Contract", href: "/smart-contract" },
       { name: "Audit Report", href: "/audit-report" },
       { name: "Brand Kit", href: "/brand-kit" },
+      { name: "Roadmap", href: "/roadmap" },
+      { name: "Governance", href: "/governance" },
     ],
     Legal: [
       { name: "Terms of Use", href: "/terms" },

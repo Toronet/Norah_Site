@@ -4,23 +4,23 @@ const About = () => {
   const features = [
     {
       icon: Shield,
-      title: "Legal Framework",
-      description: "Operates under standard contract law with SPV fiduciary structure",
+      title: "Tokenized Access to Mineral Wealth",
+      description: "Conventional mining finance excludes retail and diaspora investors. Tokenization allows transparent, fractional participation through compliant smart contracts that mirror real production data.",
     },
     {
       icon: Zap,
-      title: "Multi-Chain Bridge",
-      description: "Cross-chain transfers across 6 networks: Ethereum, Binance, Base, Solana, Toronet, and Bantu",
+      title: "Real-World Performance on Chain",
+      description: "The $NORAH system links verified export-revenues data directly to its on-chain distribution contract. This converts physical-world performance into programmable digital yield.",
     },
     {
       icon: Users,
-      title: "Revenue Sharing",
-      description: "Up to 10% APR distributions from lithium mining revenues",
+      title: "Economic Inclusion and Sovereignty",
+      description: "By converting resource flows into participatory financial instruments, Norah Mining enables local and global communities to benefit from the energy transition — not as spectators but as stakeholders.",
     },
     {
       icon: TrendingUp,
-      title: "Commodity-Backed Token",
-      description: "Backed by verifiable lithium concentrate managed by Norah Mining",
+      title: "Sustainability and Governance",
+      description: "Responsible concentrate production, environmental monitoring, and transparent revenue sharing. Each on-chain payout is both a yield event and a record of accountability.",
     },
   ];
 
@@ -31,11 +31,11 @@ const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            About Norah Token
+            The Norah Vision - Engineering Shared Prosperity
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            $NORAH token is a real-world-asset (RWA) participation token that allows global investors to share in verified concentrate revenues.
-            Norah Token is managed by Norah Holdings Pty Ltd in Australia. Norah Mining is a registered mining company with 5 Licensed mining locations in Nigeria.
+            To transform Africa's lithium endowment into a globally accessible, digitally verifiable source of sustainable wealth — 'from mine to wallet.'
+            The $NORAH token translates physical production value into programmable digital rights, representing fractional entitlement to verified concentrate revenues.
           </p>
         </div>
 
@@ -56,10 +56,14 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-card border border-border shadow-card">
           <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-primary bg-clip-text text-transparent">
-            DISCOVER NORAH
+            The Global Context — From Oil to Lithium
           </h3>
           <p className="text-muted-foreground text-center leading-relaxed">
-            Norah Token is managed by Norah Holdings Pty Ltd in Australia. Norah Mining is a registered mining company with 5 Licensed mining locations in Nigeria.
+            The twenty-first century is powered not by crude oil but by electrons. Every battery that stores those electrons is built on one quiet element — <strong>lithium</strong>. 
+            As the global industry moves towards electric mobility and renewable grids, lithium is rapidly becoming the world's most strategic commodity. 
+            Yet the geography of supply remains narrow. Australia, Chile, and China dominate global production, while Africa — despite vast pegmatite belts — captures only a fragment of market value. 
+            This imbalance mirrors the early oil age: resources located in the Global South, but value captured elsewhere. 
+            <strong className="text-primary">Norah Mining seeks to rewrite that history by using Fintech and blockchain rails to ensure that Africa's participation in the energy transition is both early and equitable.</strong>
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Copy, Check, Users, Target, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import Image from "next/image";
 
 const ProjectDetails = () => {
   const { toast } = useToast();
@@ -15,8 +16,8 @@ const ProjectDetails = () => {
   });
 
   const contractAddress = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-  const targetGoal = 5600000;
-  const raisedAmount = 2800000;
+  const targetGoal = 16000000; 
+  const raisedAmount = 8000000;
   const progress = (raisedAmount / targetGoal) * 100;
   const participants = 1247;
 
@@ -62,12 +63,55 @@ const ProjectDetails = () => {
   };
 
   const team = [
-    { name: "Mr Toye Kudehinbu", role: "Managing Director", image: "TK" },
-    { name: "Dr. Ken Alabi", role: "Chief Technical Officer - Consultant", image: "KA" },
-    { name: "Professor Wenhai Lee", role: "Chief Technology Officer - Consultant", image: "WL" },
-    { name: "Mrs. Omolara Popoola", role: "Head of Marketing", image: "OP" },
-    { name: "Mr. Benjamin Adebajo", role: "Head of Mining Operations", image: "BA" },
-    { name: "Mr Muyiwa Ayanfalu", role: "Head of Strategy", image: "MA" },
+    { 
+      name: "Toye Kudehinbu", 
+      role: "MD, Norah Mining Nigeria", 
+      image: "/ToyePics.png", 
+      country: "UK",
+      flag: "🇬🇧"
+    },
+    { 
+      name: "Roger Barley", 
+      role: "Member, NoRE Trust & Norah Pty Australia Commodity Trading Office", 
+      image: "/RogerPics.png", 
+      country: "New Zealand",
+      flag: "🇳🇿"
+    },
+    { 
+      name: "Lara Popoola", 
+      role: "Chief Marketing Officer, $Norah Token", 
+      image: "/LaraPics.png", 
+      country: "Nigeria",
+      flag: "🇳🇬"
+    },
+    { 
+      name: "Prof. Wenhai Lee", 
+      role: "$Norah Token Infrastructure Specialist", 
+      image: "/WenhaiPics.png", 
+      country: "China",
+      flag: "🇨🇳"
+    },
+    { 
+      name: "Benjamin Adebajo", 
+      role: "Trustee, NoRE Trust & Norah Pty Australia Strategy & Partnerships Office", 
+      image: "/BenjaminPics.png", 
+      country: "Australia",
+      flag: "🇦🇺"
+    },
+    { 
+      name: "Ian Smith", 
+      role: "Member, NoRE Trust & Norah Pty Australia Investment Office", 
+      image: "/SmithPics.png", 
+      country: "New Zealand",
+      flag: "🇳🇿"
+    },
+    { 
+      name: "Bolaji Akinboro", 
+      role: "Reid Hoffman Masters of Scale Entrepreneur (2024) & $Norah Token Design Specialist", 
+      image: "/BolajiPics.png", 
+      country: "Nigeria",
+      flag: "🇳🇬"
+    },
   ];
 
   return (
@@ -154,21 +198,114 @@ const ProjectDetails = () => {
           </div>
         </div>
 
+        {/* Technical Specifications */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-primary bg-clip-text text-transparent">
+            Project Technical Overview
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Plant Capacity</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 1 (2025-26):</span>
+                  <span className="text-sm font-semibold">1,000 MT/day</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 2 (2026-27):</span>
+                  <span className="text-sm font-semibold">3,000 MT/day</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Recovery Rate</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 1:</span>
+                  <span className="text-sm font-semibold">70-75%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 2:</span>
+                  <span className="text-sm font-semibold">80-85%</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Li₂O Grade</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 1:</span>
+                  <span className="text-sm font-semibold">5.5-6.0%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 2:</span>
+                  <span className="text-sm font-semibold">6.0-6.3%</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Target Price (FOB)</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 1:</span>
+                  <span className="text-sm font-semibold">$1,400-$1,900/t</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Phase 2:</span>
+                  <span className="text-sm font-semibold">$1,800-$2,300/t</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Asset Backing</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">5-Year Output:</span>
+                  <span className="text-sm font-semibold">100k MT</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-muted-foreground">Token Coverage:</span>
+                  <span className="text-sm font-semibold">20%</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card">
+              <h4 className="text-lg font-semibold mb-3 text-primary">Processing Line</h4>
+              <div className="space-y-1">
+                <div className="text-sm text-muted-foreground">• Crushing</div>
+                <div className="text-sm text-muted-foreground">• DMS Separation</div>
+                <div className="text-sm text-muted-foreground">• Magnetic Separation</div>
+                <div className="text-sm text-muted-foreground">• Final Bagging</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-primary bg-clip-text text-transparent">
             Meet Our Team
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {team.map((member, index) => (
               <div
                 key={index}
                 className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary transition-all duration-300 hover:shadow-card hover:-translate-y-1 text-center group"
               >
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-primary flex items-center justify-center text-2xl font-bold text-primary-foreground shadow-glow-purple group-hover:shadow-glow-blue transition-all duration-300">
-                  {member.image}
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-all duration-300">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold mb-1">{member.name}</h4>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+                <p className="text-sm text-muted-foreground mb-2">{member.role}</p>
+                <div className="flex items-center justify-center gap-1 text-xs text-primary font-medium">
+                  <span className="text-lg">{member.flag}</span>
+                  <span>{member.country}</span>
+                </div>
               </div>
             ))}
           </div>
