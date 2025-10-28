@@ -51,7 +51,7 @@ const networks = [
     name: "Toronet",
     symbol: "TORO",
     icon: "🟠",
-    logo: "/trx.svg",
+    logo: "/toronet.svg",
     color: "bg-orange-500",
     description: "Toronet Network"
   },

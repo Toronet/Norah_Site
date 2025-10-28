@@ -53,10 +53,10 @@ const networks = [
     name: "Toronet",
     symbol: "TORO",
     icon: "🟠",
-    logo: "/trx.svg",
+    logo: "/toronet.svg",
     color: "from-orange-500 to-orange-600",
     description: "Toronet Network",
-    features: ["African Focus", "Local Payments", "TRC-20 Compatible"],
+    features: ["African Focus", "Local Payments", "TORO Standard"],
     status: "active"
   },
   {
@@ -226,7 +226,11 @@ const SupportedNetworks = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-secondary mt-1">•</span>
-                  <span>TRC-20 (Toronet, Bantu)</span>
+                  <span>TORO Standard (Toronet)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-secondary mt-1">•</span>
+                  <span>Bantu Standard (Bantu)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-secondary mt-1">•</span>

@@ -6,7 +6,7 @@ const HowToParticipate = () => {
       icon: Wallet,
       title: "Connect Your Wallet",
       description:
-        "Connect your Web3 wallet (MetaMask, TronLink, Phantom, or other supported wallets) to access the multi-chain bridge system.",
+        "Connect your Web3 wallet (MetaMask, ToronetLink, Phantom, or other supported wallets) to access the multi-chain bridge system.",
     },
     {
       icon: ArrowRight,

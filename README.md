@@ -1,6 +1,6 @@
 # NORAH Token Platform
 
-A comprehensive multi-chain Real World Asset (RWA) tokenization platform for NORAH mining revenue streams, supporting Ethereum, Tron, and Solana blockchains.
+A comprehensive multi-chain Real World Asset (RWA) tokenization platform for NORAH mining revenue streams, supporting Ethereum, Toronet, and Solana blockchains.
 
 ## Overview
 
@@ -18,7 +18,7 @@ The NORAH Token Platform implements a legal framework for tokenizing Norah Minin
 
 ### Core Features
 
-- **Multi-Chain Support**: Ethereum, Tron, and Solana networks
+- **Multi-Chain Support**: Ethereum, Toronet, and Solana networks
 - **Revenue Distribution**: Automated quarterly USDT distributions
 - **Bridge System**: Cross-chain token transfers
 - **Legal Framework**: SPV fiduciary structure with contract law compliance
@@ -106,7 +106,7 @@ src/
 The application supports both dark and light themes with automatic system preference detection.
 
 ### Multi-Chain Bridge
-- Cross-chain token transfers between Ethereum, Tron, and Solana
+- Cross-chain token transfers between Ethereum, Toronet, and Solana
 - Automated fee calculation and reserve management
 - Transaction tracking and validation
 

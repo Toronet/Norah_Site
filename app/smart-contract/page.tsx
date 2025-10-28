@@ -115,10 +115,10 @@ const SmartContract = () => {
                   </div>
                   <div className="p-4 rounded-lg bg-muted/20 border border-border">
                     <div className="text-2xl font-bold text-primary">
-                      TRC-20
+                      TORO
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Tron Standard
+                      Toronet Standard
                     </div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/20 border border-border">
